@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LITE 官改 · 小米 / 红米多机型定制</title>
+  <meta name="description" content="LITE 官改：面向小米、Redmi K 与 Redmi Note 多机型的深度定制系统，内置高级设置、三合一状态栏与摄像头电量环。">
+  <meta name="theme-color" content="#07080a">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%2307080a'/%3E%3Ccircle cx='20' cy='20' r='12' fill='none' stroke='%237ee7d8' stroke-width='2.5' stroke-dasharray='58 18' stroke-linecap='round' transform='rotate(-90 20 20)'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%237ee7d8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="LITE 官改首页">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-dasharray="64 18" stroke-linecap="round" transform="rotate(-90 20 20)"/>
+          <circle cx="20" cy="20" r="2.6" fill="currentColor"/>
+          <circle cx="20" cy="7" r="1.6" fill="currentColor"/>
+        </svg>
+        <span class="brand-word">LITE</span>
+        <span class="brand-tag">官改</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="主导航">
+        <a href="#suite">高级设置</a>
+        <a href="#philosophy">理念</a>
+        <a href="#features">特性</a>
+        <a href="#devices">机型</a>
+        <a href="#flash">刷入</a>
+        <a href="#faq">问答</a>
+        <a class="nav-mobile-cta" href="#download">获取 ROM</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="nav-cta" href="#download">获取 ROM</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="打开菜单"
+                aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 首屏 -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-ghost" aria-hidden="true">LITE</div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-anim" style="--d:0ms">
+            <span class="pulse"></span>
+            XIAOMI / REDMI · MULTI-DEVICE
+          </p>
+          <h1 class="hero-title hero-anim" style="--d:70ms">
+            LITE<span class="hero-badge">官改</span>
+          </h1>
+          <p class="hero-lead hero-anim" style="--d:140ms">
+            克制的系统改造。<br>
+            该留下的，一个不少；该安静的，彻底安静。
+          </p>
+          <p class="hero-desc hero-anim" style="--d:210ms">
+            同一套 LITE 官改流程，覆盖小米与红米多代机型。深度精简、系统调校与「高级设置」，
+            按机型代号与底包分别构建。
+          </p>
+          <div class="hero-actions hero-anim" style="--d:280ms">
+            <a class="btn btn-primary" href="#features">
+              探索特性
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#flash">刷入指南</a>
+          </div>
+          <dl class="hero-meta hero-anim" style="--d:350ms">
+            <div><dt>底层</dt><dd>Android 13–17</dd></div>
+            <div><dt>基座</dt><dd>HyperOS / MIUI</dd></div>
+            <div><dt>机型</dt><dd>40+ 款</dd></div>
+            <div><dt>形态</dt><dd>线刷 ZIP</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual hero-anim" style="--d:180ms">
+          <div class="device-stage">
+            <div class="phone">
+              <div class="phone-screen">
+                <img class="phone-shot" src="assets/screens/device-info.webp" width="640" height="1391"
+                     decoding="async"
+                     alt="REDMI K100 Pro Max「全部参数与信息」页面：HyperOS 版本、存储空间、处理器、电池与影像参数">
+              </div>
+              <span class="phone-glare" aria-hidden="true"></span>
+            </div>
+          </div>
+          <p class="preview-caption">LITE 官改 · 实机界面</p>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#philosophy" aria-label="向下滚动">
+        <span>SCROLL</span>
+        <i></i>
+      </a>
+    </section>
+
+    <!-- 系统全貌 -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <figure class="system-showcase reveal">
+          <div class="system-showcase-frame">
+            <img src="assets/screens/system-overview.webp" width="1600" height="668" loading="lazy" decoding="async"
+                 alt="系统全貌：锁屏桌面、HyperOS 参数页、设置中的 LITE 高级设置入口、Kitsune Mask 与电池保护">
+          </div>
+          <figcaption>
+            <b>系统全貌</b>
+            <span>锁屏 · 参数 · 设置入口 · Magisk 环境 · 电池保护</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 高级设置 -->
+    <section class="section" id="suite">
+      <div class="container">
+        <div class="suite-panel reveal">
+          <div class="suite-copy">
+            <p class="section-index">01 / 高级设置</p>
+            <h2>一个入口，<br>接管系统。</h2>
+            <p class="suite-desc">
+              「高级设置」随 ROM 内置，入口位于「设置 → 我的设备」。
+              无需安装、无需悬浮窗权限，改完即时生效。
+            </p>
+
+            <div class="suite-groups">
+              <div class="suite-group">
+                <span class="suite-label">状态栏</span>
+                <p>三合一图标 · 图标显隐 · 摄像头电量环</p>
+              </div>
+              <div class="suite-group">
+                <span class="suite-label">显示</span>
+                <p>全局高刷 · 极暗 · 字体无级缩放</p>
+              </div>
+              <div class="suite-group">
+                <span class="suite-label">能源</span>
+                <p>充电控制 · 温控管理 · 电池健康度</p>
+              </div>
+              <div class="suite-group">
+                <span class="suite-label">系统</span>
+                <p>应用深度优化 · 广告设置 · Wi-Fi 密码 · 开发者开关</p>
+              </div>
+            </div>
+
+            <ul class="suite-badges">
+              <li>系统级绘制</li>
+              <li>无需重启</li>
+              <li>原生图标可还原</li>
+            </ul>
+          </div>
+
+          <div class="suite-visual" aria-hidden="true">
+            <div class="settings-card">
+              <div class="settings-bar">
+                <span>设置</span>
+                <span class="settings-dots"><i></i><i></i><i></i></span>
+              </div>
+              <div class="settings-body">
+                <div class="settings-row settings-row-muted">
+                  <span>我的设备</span>
+                </div>
+                <div class="settings-row settings-row-entry">
+                  <span class="entry-mark">
+                    <svg viewBox="0 0 40 40">
+                      <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2.4"
+                              stroke-dasharray="58 18" stroke-linecap="round" transform="rotate(-90 20 20)"/>
+                      <circle cx="20" cy="20" r="2.4" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  <span class="entry-text">
+                    <b>LITE 官改高级设置</b>
+                    <em>状态栏 · 显示 · 能源 · 系统</em>
+                  </span>
+                  <svg class="chevron" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5"/></svg>
+                </div>
+
+                <div class="settings-row settings-row-switch">
+                  <span class="row-label">
+                    <span class="row-dot dot-aqua"></span>
+                    三合一状态栏图标
+                  </span>
+                  <span class="switch is-on"><i></i></span>
+                </div>
+                <div class="settings-row settings-row-switch">
+                  <span class="row-label">
+                    <span class="row-dot dot-amber"></span>
+                    摄像头电量环
+                  </span>
+                  <span class="switch is-on"><i></i></span>
+                </div>
+                <div class="settings-row settings-row-switch">
+                  <span class="row-label">
+                    <span class="row-dot dot-dim"></span>
+                    全局高刷
+                  </span>
+                  <span class="switch"><i></i></span>
+                </div>
+                <div class="settings-row settings-row-switch">
+                  <span class="row-label">
+                    <span class="row-dot dot-dim"></span>
+                    温控管理
+                  </span>
+                  <span class="switch"><i></i></span>
+                </div>
+              </div>
+              <div class="settings-foot">设置 → 我的设备 → LITE 官改高级设置</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-block">
+          <div class="gallery-head reveal">
+            <div>
+              <p class="gallery-label">INTERFACE / 界面实拍</p>
+              <h3>界面，比描述更直接。</h3>
+              <p class="gallery-sub">10 张截图，来自 LITE 官改内置的「高级设置」。</p>
+            </div>
+            <div class="gallery-nav">
+              <button id="galleryPrev" type="button" aria-label="向左查看更多截图" disabled>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+              </button>
+              <button id="galleryNext" type="button" aria-label="向右查看更多截图">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery-rail" id="galleryRail" tabindex="0" aria-label="高级设置界面截图">
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/trio.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="三合一状态栏设置页：圆环预览、状态配色、总开关与布局选项">
+              </div>
+              <figcaption><b>三合一状态栏</b><span>圆环 / 胶囊 · 状态配色</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/cutout.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="摄像头电量环设置页：Hook 安装、直径、粗细与位置微调">
+              </div>
+              <figcaption><b>摄像头电量环</b><span>Hook 绘制 · 直径与位置</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/overview-top.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="高级设置首页：锁屏与显示、状态栏设置、电池和性能">
+              </div>
+              <figcaption><b>功能总览</b><span>显示 · 状态栏 · 电池</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/display.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="全局高刷、极暗模式、字体大小与锁屏通知设置">
+              </div>
+              <figcaption><b>显示与高刷</b><span>全局高刷 · 极暗 · 字体</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/status-icons.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="状态栏图标设置：通知图标个数、纯净状态栏与系统图标开关">
+              </div>
+              <figcaption><b>状态栏图标</b><span>原生图标显隐 · 纯净状态栏</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/thermal.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="温控管理设置：当前预设与性能、均衡、省电三档">
+              </div>
+              <figcaption><b>温控管理</b><span>三档预设 · 自定义参数</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/battery.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="电池健康度：当前电量、温度、设计容量、实际容量与循环次数">
+              </div>
+              <figcaption><b>电池健康</b><span>容量 · 温度 · 循环次数</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/dex2oat.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="应用深度优化：当前状态、开始深度优化与清除编译文件">
+              </div>
+              <figcaption><b>应用深度优化</b><span>全量编译 · 进度可视</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/ads.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="广告与通知设置：通知过滤、通知访问权限、通知历史与通知样式">
+              </div>
+              <figcaption><b>广告与通知</b><span>通知过滤 · 系统广告开关</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/overview-bottom.webp" width="640" height="1391" loading="lazy" decoding="async"
+                     alt="高级设置首页下半部分：系统设置、广告、WIFI 密码、开发者开关与关于">
+              </div>
+              <figcaption><b>功能总览 · 续</b><span>系统设置与关于</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 数据条 -->
+    <section class="stats-band" aria-label="支持信息">
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <span class="stat-label">适配平台</span>
+          <strong>Android 13–17</strong>
+          <span class="stat-note">HyperOS / MIUI 多版本</span>
+        </div>
+        <div class="stat reveal" style="--d:60ms">
+          <span class="stat-label">机型覆盖</span>
+          <strong>40+ 款</strong>
+          <span class="stat-note">小米 · Redmi K · Redmi Note</span>
+        </div>
+        <div class="stat reveal" style="--d:120ms">
+          <span class="stat-label">当前构建</span>
+          <strong>K100 Pro Max</strong>
+          <span class="stat-note">songyuan / M098FE</span>
+        </div>
+        <div class="stat reveal" style="--d:180ms">
+          <span class="stat-label">内置工具</span>
+          <strong>高级设置</strong>
+          <span class="stat-note">系统级 · 免安装</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 理念 -->
+    <section class="section" id="philosophy">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index">02 / 理念</p>
+          <h2>删掉噪音，<br>留下秩序。</h2>
+          <p class="section-sub">
+            LITE 官改不是功能堆叠，而是一次有取舍的重构。只保留能让系统更安静、更顺手的部分。
+          </p>
+        </div>
+
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="principle-num">01</span>
+            <h3>纯净</h3>
+            <p>移除推广、统计、游戏中心与冗余服务，减少后台常驻与无谓唤醒。</p>
+          </article>
+          <article class="principle reveal" style="--d:80ms">
+            <span class="principle-num">02</span>
+            <h3>克制</h3>
+            <p>不重绘系统，不替换核心交互，保留 HyperOS 原本的动效与秩序。</p>
+          </article>
+          <article class="principle reveal" style="--d:160ms">
+            <span class="principle-num">03</span>
+            <h3>完整</h3>
+            <p>相机、音频、振动、互联与安全组件保持完整，只做必要的底层调校。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特性 -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index">03 / 特性</p>
+          <h2>每一处改动，<br>都能被感知。</h2>
+          <p class="section-sub">
+            从状态栏到温控节点，把系统能力收拢成几件真正会用的事。
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="card card-wide reveal">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M5 19c0-7.2 7-13 15-13 0 8-5.6 14-13 14H5v-1Z"/><path d="M5 19c3.2-4.4 6.4-7.4 10.5-9.5"/></svg>
+              </span>
+              <span class="card-kicker">DEBLOAT</span>
+            </div>
+            <h3>深度精简</h3>
+            <p>剔除推广、统计、游戏中心、音乐视频与应用商店等冗余组件，保留相机、音频、振动与互联等核心能力。</p>
+            <ul class="tag-row">
+              <li>推广服务</li><li>统计组件</li><li>冗余日志</li><li>预装应用</li>
+            </ul>
+          </article>
+
+          <article class="card card-wide reveal" style="--d:80ms">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4.2-5.4"/><circle cx="12" cy="17" r="1.4"/></svg>
+              </span>
+              <span class="card-kicker">PERFORMANCE</span>
+            </div>
+            <h3>性能与温控</h3>
+            <p>精简日志与调试服务，放宽不必要的温控降频，调整帧率与动态缓冲策略，让性能释放更接近硬件本身。</p>
+            <ul class="tag-row">
+              <li>日志降噪</li><li>帧率策略</li><li>温控放宽</li><li>动态缓冲</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><rect x="3" y="8" width="15" height="9" rx="2.4"/><path d="M20.5 11v3"/><path d="M6.5 12.4l2 2 3-4"/></svg>
+              </span>
+            </div>
+            <h3>充电控制</h3>
+            <p>旁路供电、定量停充与公版 PPS，配合电池健康度查看，减少边充边玩带来的损耗。</p>
+          </article>
+
+          <article class="card reveal" style="--d:60ms">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg>
+              </span>
+            </div>
+            <h3>三合一状态栏</h3>
+            <p>圆环与胶囊两种样式，Wi-Fi、信号、电量合而为一，深浅色状态栏各有独立配色。</p>
+          </article>
+
+          <article class="card reveal" style="--d:120ms">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="2.2"/><path d="M12 3.8v3M12 17.2v3M3.8 12h3M17.2 12h3"/></svg>
+              </span>
+            </div>
+            <h3>摄像头电量环</h3>
+            <p>在挖孔位置绘制电量环与亮度小太阳，可调直径、线宽与位置，不占用悬浮窗。</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M5 8h14M5 16h14"/><circle cx="9" cy="8" r="2"/><circle cx="15" cy="16" r="2"/></svg>
+              </span>
+            </div>
+            <h3>系统级自由</h3>
+            <p>全局高刷、极暗模式、字体无级缩放与开发者开关，集中在一个应用内完成。</p>
+          </article>
+
+          <article class="card reveal" style="--d:60ms">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.6c0 4-3 7.3-7 9-4-1.7-7-5-7-9V6l7-2.5Z"/><path d="m9.2 12 1.9 1.9 3.8-3.8"/></svg>
+              </span>
+            </div>
+            <h3>广告净化</h3>
+            <p>把系统内分散的广告开关集中到一处管理，减少日常使用中的打扰。</p>
+          </article>
+
+          <article class="card reveal" style="--d:120ms">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/><path d="m6.5 6.5 2.6 2.6M14.9 14.9l2.6 2.6M17.5 6.5l-2.6 2.6M9.1 14.9l-2.6 2.6"/></svg>
+              </span>
+            </div>
+            <h3>完整性改造</h3>
+            <p>绕过系统应用签名校验、去除 AVB 校验、主题防恢复，并内置 Magisk 环境。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="devices">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index">04 / 机型</p>
+          <h2>不止一台。</h2>
+          <p class="section-sub">
+            同一套 LITE 官改流程，覆盖小米与 Redmi 多代机型。
+            每台设备使用自己的底包、代号与线刷配置，不能跨型号混刷。
+          </p>
+        </div>
+
+        <div class="device-groups">
+          <article class="device-group reveal">
+            <header class="device-head">
+              <div>
+                <span class="device-kicker">XIAOMI</span>
+                <h3>小米数字 / MIX</h3>
+              </div>
+              <span class="device-count">24 款</span>
+            </header>
+            <ul class="device-list">
+              <li>小米 11</li>
+              <li>小米 11 Pro</li>
+              <li>小米 11 Ultra</li>
+              <li>小米 12</li>
+              <li>小米 12 Pro</li>
+              <li>小米 12 Pro 天玑版</li>
+              <li>小米 12S</li>
+              <li>小米 12S Pro</li>
+              <li>小米 12S Ultra</li>
+              <li>小米 13</li>
+              <li>小米 13 Pro</li>
+              <li>小米 13 Ultra</li>
+              <li>小米 14</li>
+              <li>小米 14 Pro</li>
+              <li>小米 14 Ultra</li>
+              <li>小米 15</li>
+              <li>小米 15 Pro</li>
+              <li>小米 15 Ultra</li>
+              <li>小米 17</li>
+              <li>小米 17 Pro</li>
+              <li>小米 17 Pro Max</li>
+              <li>小米 17 Ultra</li>
+              <li>小米 17 Max</li>
+              <li>小米 MIX 4</li>
+            </ul>
+          </article>
+
+          <article class="device-group reveal" style="--d:80ms">
+            <header class="device-head">
+              <div>
+                <span class="device-kicker">REDMI K</span>
+                <h3>Redmi K 系列</h3>
+              </div>
+              <span class="device-count">17 款</span>
+            </header>
+            <ul class="device-list">
+              <li>Redmi K50</li>
+              <li>Redmi K50 Pro</li>
+              <li>Redmi K50 至尊版</li>
+              <li>Redmi K50 电竞版</li>
+              <li>Redmi K60</li>
+              <li>Redmi K60 Pro</li>
+              <li>Redmi K60E</li>
+              <li>Redmi K60 至尊版</li>
+              <li>Redmi K70</li>
+              <li>Redmi K70 Pro</li>
+              <li>Redmi K70 Ultra</li>
+              <li>Redmi K80</li>
+              <li>Redmi K80 Pro</li>
+              <li>Redmi K80 Ultra</li>
+              <li>Redmi K90</li>
+              <li>Redmi K90 Pro Max</li>
+              <li>Redmi K100 Pro Max</li>
+            </ul>
+          </article>
+
+          <article class="device-group reveal" style="--d:160ms">
+            <header class="device-head">
+              <div>
+                <span class="device-kicker">REDMI NOTE</span>
+                <h3>Redmi Note 系列</h3>
+              </div>
+              <span class="device-count">3 款</span>
+            </header>
+            <ul class="device-list">
+              <li>Redmi Note 11T Pro</li>
+              <li>Redmi Note 12T Pro</li>
+              <li>Redmi Note 12 Turbo</li>
+            </ul>
+          </article>
+
+          <div class="device-current reveal" style="--d:200ms">
+            <div>
+              <span class="current-label">CURRENT BUILD</span>
+              <p class="current-name">红米 K100 Pro Max <em>songyuan</em></p>
+              <p class="current-meta">HyperOS 4.0.5.0.XGNCNXM · Android 17 · M098FE</p>
+            </div>
+            <a class="current-link" href="#download">
+              获取此版本
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <p class="device-note reveal">
+          机型列表整理自 make.sh 的机型映射。每款设备需使用对应代号与底包单独构建，
+          请勿把其他型号的线刷包刷入本机。
+        </p>
+      </div>
+    </section>
+
+    <!-- 系统级改造 -->
+    <section class="section" id="system">
+      <div class="container system-grid">
+        <div class="system-head reveal">
+          <p class="section-index">05 / 底层</p>
+          <h2>不浮于<br>表面。</h2>
+          <p class="section-sub">
+            真正影响体验的改动，发生在系统框架层。它们不会出现在桌面上，却决定了系统能走多远。
+          </p>
+          <p class="system-warning">
+            以上改动会降低系统完整性保护。<br>
+            仅建议在个人设备、且理解风险的前提下使用。
+          </p>
+        </div>
+
+        <div class="system-list">
+          <article class="system-item reveal">
+            <span class="system-num">01</span>
+            <div>
+              <h3>签名校验绕过</h3>
+              <p>针对 Android 16 / 17 的 framework、services 与 miui-services 处理，修改版系统应用可正常安装。</p>
+            </div>
+            <span class="system-tag">SYSTEM</span>
+          </article>
+          <article class="system-item reveal" style="--d:50ms">
+            <span class="system-num">02</span>
+            <div>
+              <h3>AVB 校验移除</h3>
+              <p>关闭 vbmeta 校验，同时保留完整的线刷回滚路径，方便随时恢复官方系统。</p>
+            </div>
+            <span class="system-tag">VERITY</span>
+          </article>
+          <article class="system-item reveal" style="--d:100ms">
+            <span class="system-num">03</span>
+            <div>
+              <h3>Data 加密移除</h3>
+              <p>按构建配置关闭 data 加密，便于备份、迁移与救援，也让跨版本刷入更干净。</p>
+            </div>
+            <span class="system-tag">DATA</span>
+          </article>
+          <article class="system-item reveal" style="--d:150ms">
+            <span class="system-num">04</span>
+            <div>
+              <h3>主题防恢复</h3>
+              <p>调整主题目录权限，重启后不再被系统重置，自定义主题可以长期保留。</p>
+            </div>
+            <span class="system-tag">THEME</span>
+          </article>
+          <article class="system-item reveal" style="--d:200ms">
+            <span class="system-num">05</span>
+            <div>
+              <h3>Magisk 内置</h3>
+              <p>ROM 内附带 Magisk，按首次开机提示完成环境修复，无需额外寻找刷机包。</p>
+            </div>
+            <span class="system-tag">ROOT</span>
+          </article>
+          <article class="system-item reveal" style="--d:250ms">
+            <span class="system-num">06</span>
+            <div>
+              <h3>Zipalign 全量校验</h3>
+              <p>所有系统 APK 统一进行对齐检查，减少加载与内存开销，也避免运行时的隐性异常。</p>
+            </div>
+            <span class="system-tag">APK</span>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 刷入 -->
+    <section class="section" id="flash">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index">06 / 刷入</p>
+          <h2>六步，<br>换一套系统。</h2>
+          <p class="section-sub">
+            线刷包需在 Windows 下运行。首次刷入会清空数据，请先完成整机备份。
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>备份与解锁</h3>
+            <p>解锁 Bootloader，备份照片、聊天记录与重要数据。首次刷入会格式化 Data。</p>
+          </li>
+          <li class="step reveal" style="--d:60ms">
+            <span class="step-num">02</span>
+            <h3>下载与解压</h3>
+            <p>在 Windows 上把线刷包解压到简短路径，避免中文目录与过长的文件名。</p>
+          </li>
+          <li class="step reveal" style="--d:120ms">
+            <span class="step-num">03</span>
+            <h3>进入 Fastboot</h3>
+            <p>关机后按住音量下键与电源键，进入 Fastboot 后连接数据线。</p>
+          </li>
+          <li class="step reveal" style="--d:180ms">
+            <span class="step-num">04</span>
+            <h3>运行线刷脚本</h3>
+            <p>双击 <code>LITE手工官改_*.bat</code>，等待各分区写入完成，中途不要拔线。</p>
+          </li>
+          <li class="step reveal" style="--d:240ms">
+            <span class="step-num">05</span>
+            <h3>选择刷入模式</h3>
+            <p>首次或跨版本选择 <b>N</b>（格式化 Data）；同版本升级可选择 <b>Y</b> 保留数据。</p>
+          </li>
+          <li class="step reveal" style="--d:300ms">
+            <span class="step-num">06</span>
+            <h3>首次开机</h3>
+            <p>脚本会自动重启。首次启动较慢，请耐心等待，不要强制断电或自行重启。</p>
+          </li>
+        </ol>
+
+        <aside class="root-note reveal">
+          <div class="root-note-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 19 6v5.6c0 4-3 7.3-7 9-4-1.7-7-5-7-9V6l7-2.5Z"/><path d="M12 8v4.5"/><circle cx="12" cy="16" r=".8" fill="currentColor" stroke="none"/></svg>
+            <div>
+              <h3>首次开机的 Root 步骤</h3>
+              <p>如果 Magisk 显示灰色图标，按下面顺序完成环境修复。</p>
+            </div>
+          </div>
+          <ol class="root-steps">
+            <li><b>第一次开机</b><span>安装 ROM 内的 Magisk.apk，打开后点击「修复环境」并确认。</span></li>
+            <li><b>第二次开机</b><span>在 Magisk 中选择「直接安装到系统」。</span></li>
+            <li><b>第三次开机</b><span>若面具无法打开，覆盖安装最新版德尔塔面具即可正常使用。</span></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 获取 -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="download-card reveal">
+          <div class="download-main">
+            <p class="section-index">07 / 获取</p>
+            <h2>LITE 官改<span class="download-edition">多机型</span></h2>
+            <p class="download-desc">
+              当前展示为 songyuan 构建，其他机型按各自代号与底包获取。
+              下载后请核对文件名中的 MD5，本页面不直接托管安装包。
+            </p>
+            <div class="download-actions">
+              <a class="btn btn-primary" href="mailto:2058277120@qq.com?subject=%E8%8E%B7%E5%8F%96%20LITE%20%E5%AE%98%E6%94%B9%20ROM">
+                联系作者获取
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="#flash">查看刷入步骤</a>
+            </div>
+            <p class="download-note">
+              ROM 体积较大，建议使用稳定网络，并在下载完成后校验哈希。
+              <a class="inline-link" href="#devices">查看适配机型</a>
+            </p>
+          </div>
+
+          <div class="download-spec">
+            <div class="spec-row"><span>当前构建</span><b>Redmi K100 Pro Max</b></div>
+            <div class="spec-row"><span>代号</span><b>songyuan / M098FE</b></div>
+            <div class="spec-row"><span>底包</span><b>HyperOS 4.0.5.0.XGNCNXM</b></div>
+            <div class="spec-row"><span>Android</span><b>17 · API 37</b></div>
+            <div class="spec-row"><span>平台</span><b>第五代骁龙 8 至尊版</b></div>
+            <div class="spec-row"><span>支持机型</span><b>40+ 款</b></div>
+            <div class="spec-row"><span>包体</span><b>约 9.9 GB · 线刷 ZIP</b></div>
+            <div class="spec-row"><span>作者</span><b>阿权Lite</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 问答 -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="section-head reveal">
+          <p class="section-index">08 / 问答</p>
+          <h2>刷之前，<br>先看这里。</h2>
+          <p class="section-sub">关于数据、Root 与兼容性的几个常见问题。</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>第一次刷入必须清空数据吗？<span class="faq-icon"></span></summary>
+            <p>是。首次刷入、从官方到官改、官改互刷以及跨 Android 版本，都建议选择 N（格式化 Data）。同版本官改升级才可以选择 Y 保留数据。</p>
+          </details>
+          <details class="faq-item">
+            <summary>ROM 自带 Root 吗？<span class="faq-icon"></span></summary>
+            <p>内置 Magisk。首次开机按页面中的三步提示完成环境修复即可；如果面具更新，覆盖安装最新版德尔塔面具。</p>
+          </details>
+          <details class="faq-item">
+            <summary>可以在其他机型上刷入吗？<span class="faq-icon"></span></summary>
+            <p>可以。LITE 官改覆盖上方机型列表中的小米与 Redmi 设备，但必须使用对应代号与底包构建的线刷包。不同型号的分区与硬件配置不同，不能把 songyuan 的包刷到其他机型。</p>
+          </details>
+          <details class="faq-item">
+            <summary>刷坏了怎么回滚？<span class="faq-icon"></span></summary>
+            <p>进入 Fastboot，重新线刷对应版本的官方完整包即可恢复。刷机前请务必确认官方包版本与机型完全匹配。</p>
+          </details>
+          <details class="faq-item">
+            <summary>为什么页面不直接提供下载？<span class="faq-icon"></span></summary>
+            <p>ROM 体积约 9.9 GB，直接托管成本较高，也容易出现第三方转载与版本混淆。通过作者获取可以确保文件完整、版本对应。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-dasharray="64 18" stroke-linecap="round" transform="rotate(-90 20 20)"/>
+          <circle cx="20" cy="20" r="2.6" fill="currentColor"/>
+          <circle cx="20" cy="7" r="1.6" fill="currentColor"/>
+        </svg>
+        <div>
+          <p class="footer-title">LITE 官改</p>
+          <p class="footer-sub">由 阿权Lite 制作 · 2026</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="页脚链接">
+        <a href="https://gitee.com/A17633374257/AquanSettings" target="_blank" rel="noopener">高级设置源码</a>
+        <a href="#flash">刷入指南</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <p class="footer-note">本页面仅用于 ROM 介绍。刷机有风险，请自行评估并做好备份。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
