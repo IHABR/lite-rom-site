@@ -2262,6 +2262,34 @@ code {
   margin-top: 30px;
 }
 
+.download-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.download-contact span {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: var(--faint);
+  text-transform: uppercase;
+}
+
+.download-contact b {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: #e3e7eb;
+}
+
+.download-contact .inline-link {
+  font-size: 11.5px;
+  margin-left: 2px;
+}
+
 .download-note {
   margin-top: 22px;
   font-size: 10.5px;
