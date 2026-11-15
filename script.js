@@ -78,6 +78,37 @@
     reveals.forEach((el) => el.classList.add('is-visible'));
   }
 
+  /* 功能日志标签页 */
+  const logTabs = [...document.querySelectorAll('.log-tab')];
+  const logPanels = [...document.querySelectorAll('.log-panel')];
+
+  if (logTabs.length && logPanels.length) {
+    const selectLog = (key) => {
+      logTabs.forEach((tab) => {
+        const active = tab.dataset.log === key;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+      });
+      logPanels.forEach((panel) => {
+        panel.hidden = panel.dataset.panel !== key;
+      });
+    };
+
+    logTabs.forEach((tab, index) => {
+      tab.tabIndex = tab.classList.contains('is-active') ? 0 : -1;
+      tab.addEventListener('click', () => selectLog(tab.dataset.log));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+        event.preventDefault();
+        const dir = event.key === 'ArrowRight' ? 1 : -1;
+        const next = logTabs[(index + dir + logTabs.length) % logTabs.length];
+        selectLog(next.dataset.log);
+        next.focus();
+      });
+    });
+  }
+
   /* 截图横向浏览 */
   const rail = document.getElementById('galleryRail');
   const galleryPrev = document.getElementById('galleryPrev');

@@ -2092,6 +2092,201 @@ code {
   color: var(--faint);
 }
 
+/* ------------------------------------------------------------------ 功能日志 */
+
+.log {
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
+.log-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.log-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease),
+    background 0.25s var(--ease);
+}
+
+.log-tab span {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--faint);
+}
+
+.log-tab:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.log-tab.is-active {
+  background: var(--text);
+  border-color: var(--text);
+  color: #0a0b0d;
+}
+
+.log-tab.is-active span {
+  color: rgba(10, 11, 13, 0.45);
+}
+
+.log-panel {
+  padding-top: 6px;
+}
+
+.log-panel[hidden] {
+  display: none;
+}
+
+.log-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(28px, 4vw, 56px);
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.log-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.log-item-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--faint);
+  padding-top: 4px;
+}
+
+.log-item h3 {
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.log-item p {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.log-list-single {
+  grid-template-columns: 1fr;
+}
+
+.log-note {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  border-left: 2px solid rgba(242, 196, 106, 0.5);
+  border-radius: 0 14px 14px 0;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.log-note p {
+  font-size: 12px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.log-note b {
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.log-changelog {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.log-release {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.log-release time {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  padding-top: 5px;
+}
+
+.log-release ul {
+  display: grid;
+  gap: 9px;
+}
+
+.log-release li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.log-release li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.45;
+}
+
+@media (max-width: 940px) {
+  .log-list {
+    grid-template-columns: 1fr;
+  }
+
+  .log-release {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .log-release time {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .log-tab {
+    height: 34px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .log-note {
+    padding: 20px;
+  }
+}
+
 /* ------------------------------------------------------------------ 刷入 */
 
 .steps {

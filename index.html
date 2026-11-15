@@ -30,6 +30,7 @@
         <a href="#suite">高级设置</a>
         <a href="#philosophy">理念</a>
         <a href="#features">特性</a>
+        <a href="#log">功能日志</a>
         <a href="#devices">机型</a>
         <a href="#flash">刷入</a>
         <a href="#faq">问答</a>
@@ -502,10 +503,439 @@
       </div>
     </section>
 
+    <!-- 功能日志 -->
+    <section class="section" id="log">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index">04 / 功能日志</p>
+          <h2>完整清单，<br>逐条列出。</h2>
+          <p class="section-sub">
+            整理自 ROM 内置的功能日志：系统层改动、Lite-Store 与高级工具箱，
+            以及刷入须知与更新记录。
+          </p>
+        </div>
+
+        <div class="log reveal">
+          <div class="log-tabs" role="tablist" aria-label="功能日志分类">
+            <button class="log-tab is-active" type="button" role="tab" aria-selected="true"
+                    aria-controls="logSystem" data-log="system">系统层<span>23</span></button>
+            <button class="log-tab" type="button" role="tab" aria-selected="false"
+                    aria-controls="logStore" data-log="store">Lite-Store<span>5</span></button>
+            <button class="log-tab" type="button" role="tab" aria-selected="false"
+                    aria-controls="logTools" data-log="tools">高级工具箱<span>8</span></button>
+            <button class="log-tab" type="button" role="tab" aria-selected="false"
+                    aria-controls="logFlash" data-log="flash">刷入须知</button>
+            <button class="log-tab" type="button" role="tab" aria-selected="false"
+                    aria-controls="logChangelog" data-log="changelog">更新日志</button>
+          </div>
+
+          <!-- 系统层 -->
+          <div class="log-panel" id="logSystem" role="tabpanel" aria-label="ROM 系统层" data-panel="system">
+            <ol class="log-list">
+              <li class="log-item">
+                <span class="log-item-num">01</span>
+                <div>
+                  <h3>深度精简系统内置应用</h3>
+                  <p>精简共 217 项删除/替换，覆盖应用商店、游戏中心、小米支付、系统更新、语音助手、小米云服务推广位及 Cust 分区预装的电商/输入法/资讯类应用，保留相机、相册、设置等核心组件。提供深度精简与常规精简两个版本，常规精简额外保留应用商店与小爱全家桶。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">02</span>
+                <div>
+                  <h3>关闭全部日志与后台上报</h3>
+                  <p>关闭日志容量限制、离线日志、统计上报、诊断日志、内存转储、Wi-Fi 扫描日志、蓝牙日志与预编译详细日志，减少后台 IO 与空载唤醒。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">03</span>
+                <div>
+                  <h3>去除 AVB 校验</h3>
+                  <p>移除系统分区完整性校验，自定义改动不再被拦截。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">04</span>
+                <div>
+                  <h3>BL 锁状态伪装与 vbmeta 重签</h3>
+                  <p>伪装为已锁 BL、绿色验证状态，并按机型重新生成校验镜像，规避系统完整性检测。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">05</span>
+                <div>
+                  <h3>内置 root 并自动修补 Boot</h3>
+                  <p>支持 KernelSU（KSU）与 Magisk 两种方案，按机型识别启动镜像并自动重打包，对应安装包预置到系统内，刷完即有 root 环境。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">06</span>
+                <div>
+                  <h3>核心破解（签名校验）</h3>
+                  <p>覆盖 Android 13/14 与 Android 16+ 的 V1/V2/V3 验签链路，并接管系统对 APK 签名、共享用户签名与 JAR 摘要的比对，改机、重签或替换系统应用不再被拒。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">07</span>
+                <div>
+                  <h3>核心破解（安装限制）</h3>
+                  <p>允许降级安装应用，允许 sharedUserId 不一致的应用安装与升级，关闭系统应用更新校验，修改版系统应用可直接覆盖安装。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">08</span>
+                <div>
+                  <h3>全局 zipalign 对齐</h3>
+                  <p>所有重新打包的系统应用统一 4 字节对齐，降低长期使用后的内存碎片与加载开销。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">09</span>
+                <div>
+                  <h3>内存与后台调度优化</h3>
+                  <p>放宽缓存进程与后台应用上限，关闭激进的内存回收与预启动/预加载/预缓存/息屏清理策略，微信、QQ 加入保活白名单。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">10</span>
+                <div>
+                  <h3>解除温控降频与调光限制</h3>
+                  <p>关闭显示、帧率、画质与框架层的温控降频降亮度，空闲刷新率阈值下调，日常与游戏场景不再被强行压频。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">11</span>
+                <div>
+                  <h3>影音全维度增强</h3>
+                  <p>开启 HiFi 高保真、环绕立体声、声场与游戏音效、音频震感、双声道录屏、通话变声，并破除原生外放音量上限。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">12</span>
+                <div>
+                  <h3>图像与视频画质提升</h3>
+                  <p>JPG 编码质量拉满，开启硬件视频加速、HDR 超清显示、视频补帧/防抖/AI 增强与视频后处理。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">13</span>
+                <div>
+                  <h3>相机实验室与美颜增强</h3>
+                  <p>开启相机实验室模式扩展自定义拍摄能力，同时优化视频通话美颜链路。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">14</span>
+                <div>
+                  <h3>触控跟手度优化</h3>
+                  <p>大幅降低触控输入延迟，提升滑动与点击跟手度。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">15</span>
+                <div>
+                  <h3>充电策略优化</h3>
+                  <p>开启智能充电与加速充电，配合高级工具箱的旁路供电、公版 PPS、定量停充使用。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">16</span>
+                <div>
+                  <h3>防烧屏与应用复活机制</h3>
+                  <p>降低长时间亮屏烧屏风险，应用异常退出后可自动恢复。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">17</span>
+                <div>
+                  <h3>高精度定位增强</h3>
+                  <p>提升定位精度与首次定位响应速度。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">18</span>
+                <div>
+                  <h3>主题目录权限修复</h3>
+                  <p>开机修复主题目录权限，避免换主题后因权限问题被系统还原。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">19</span>
+                <div>
+                  <h3>设置界面「我的设备」美化</h3>
+                  <p>采用三张卡片、参数网格与统一配色的定制风格，并自动适配不同机型与版本，结构不匹配时保留系统原样，避免闪退。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">20</span>
+                <div>
+                  <h3>省电与电池「亮屏时长」</h3>
+                  <p>在“使用时长”下方新增自上次充电以来的亮屏时长，小号灰字、夜间自动换色。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">21</span>
+                <div>
+                  <h3>去广告与去上报</h3>
+                  <p>截断云控下发的温控/调度方案、替换去广告版广告服务、清理安全中心的采集与推荐、关闭设备注册与号码认证上报，并按 Android 版本替换改版安装器。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">22</span>
+                <div>
+                  <h3>省电取舍</h3>
+                  <p>限制后台进程、Doze 参数、降低刷新率、Wi-Fi 休眠策略、电池智能服务与 AVF 虚拟机等会牺牲功能或流畅度的项不默认改动，交由用户按需选择。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">23</span>
+                <div>
+                  <h3>全屏 AOD 与功耗细节</h3>
+                  <p>为支持机型开启全屏 AOD 并注入 1Hz 刷新能力，指纹监视默认帧率清空；部分机型额外降低切换应用时的 CPU 下限与 GPU 唤醒开销。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Lite-Store -->
+          <div class="log-panel" id="logStore" role="tabpanel" aria-label="Lite-Store" data-panel="store" hidden>
+            <ol class="log-list">
+              <li class="log-item">
+                <span class="log-item-num">01</span>
+                <div>
+                  <h3>应用市场</h3>
+                  <p>内置应用市场，首页直接展示小米官方热门榜，支持搜索、下拉刷新、分页加载与本地缓存，不伪造下载量或排名。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">02</span>
+                <div>
+                  <h3>官方更新</h3>
+                  <p>对可信的小米官方系统应用使用官方更新协议批量检查更新，安装前强制校验包名、版本与签名。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">03</span>
+                <div>
+                  <h3>下载与安装</h3>
+                  <p>统一下载目录并支持自定义且持久化，后台下载支持暂停、续传、校验与任务持久化；安装走系统安装器或可选 Root 静默安装，签名不兼容时阻止安装。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">04</span>
+                <div>
+                  <h3>模块中心与框架下载</h3>
+                  <p>模块中心收录 LSPosed 官方索引全量条目并直连开发者发布页，兼容传统 Xposed 与新版 libxposed 模块；框架下载中心提供 LSPosed 官方存档、Vector、LSPatch，区分 Magisk 包与 APK 并标注 Android 支持范围。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">05</span>
+                <div>
+                  <h3>安全检查与主题</h3>
+                  <p>安装前展示包名、来源、签名、Native ABI 与权限变化，ABI 不匹配时阻止安装；提供 Liquid Glass 主题，可切换主题色、明暗模式、玻璃透明度、模糊程度与低模糊性能模式。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- 高级工具箱 -->
+          <div class="log-panel" id="logTools" role="tabpanel" aria-label="高级工具箱" data-panel="tools" hidden>
+            <ol class="log-list">
+              <li class="log-item">
+                <span class="log-item-num">01</span>
+                <div>
+                  <h3>设置首页默认入口</h3>
+                  <p>系统设置首页「我的设备」正下方自动插入「LITE 官改高级设置」入口，图标与工具箱一致、点击直达，首页重建后自动补插，关闭设置再打开也不会消失。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">02</span>
+                <div>
+                  <h3>开机即生效</h3>
+                  <p>注入通道随系统启动加载，完全不需要 Magisk / Zygisk，无模块冲突、无重复注入。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">03</span>
+                <div>
+                  <h3>挖孔电量环 + 亮度小太阳 + 隐藏电池图标</h3>
+                  <p>绕摄像头挖孔绘制绿色电量环（低电量转琥珀色），随亮度显示不同光芒数的小太阳，并可独立隐藏系统电池图标，直径、线宽、位置均可调。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">04</span>
+                <div>
+                  <h3>温控管理（三档预设 + 自定义）</h3>
+                  <p>性能 / 均衡 / 省电三档，CPU 上限按硬件峰值 100% / 75% / 60% 取值；支持逐节点自定义，重启后依然生效。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">05</span>
+                <div>
+                  <h3>应用深度优化</h3>
+                  <p>批量编译全部已安装应用提升启动速度，支持暂停 / 继续（不从头再来）与一键清除编译产物。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">06</span>
+                <div>
+                  <h3>充电控制与电池健康</h3>
+                  <p>旁路供电、公版 PPS、定量停充（到设定电量自动停），并可查看电池健康度、循环次数与剩余容量。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">07</span>
+                <div>
+                  <h3>状态栏与显示自定义</h3>
+                  <p>24 项状态栏图标开关、通知图标个数、全局高刷（含锁屏最高刷新率）、极暗模式、字体大小无级缩放、锁屏通知 / 运营商 / 扫一扫显示控制。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">08</span>
+                <div>
+                  <h3>其他实用开关</h3>
+                  <p>控制中心 5G 开关、安全评分保持满分、关闭体验改进上报入口、广告开关集中管理、Wi-Fi 密码查看、开发者选项 / USB / 无线调试入口、一键重启系统界面、通知过滤 / 历史 / 闪光灯 / 气泡等。</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- 刷入须知 -->
+          <div class="log-panel" id="logFlash" role="tabpanel" aria-label="刷入须知" data-panel="flash" hidden>
+            <ol class="log-list log-list-single">
+              <li class="log-item">
+                <span class="log-item-num">01</span>
+                <div>
+                  <h3>解压与进入 Fastboot</h3>
+                  <p>下载并解压 ROM 压缩包，手机进入 fastboot 模式。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">02</span>
+                <div>
+                  <h3>安装驱动</h3>
+                  <p>电脑打开压缩包内以 drive 开头的压缩包，安装驱动。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">03</span>
+                <div>
+                  <h3>连接并运行脚本</h3>
+                  <p>数据线连接手机，电脑打开 BAT 批处理文件。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">04</span>
+                <div>
+                  <h3>选择是否保数据</h3>
+                  <p>按提示选择：Y 为保数据刷入，N 为格式化刷入。第一次刷机务必选择 N（格式化刷入）。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">05</span>
+                <div>
+                  <h3>选择 Root 方案</h3>
+                  <p>输入后会出现 123 选项：1 保持无 root，2 Magisk，3 KSU，按需选择。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">06</span>
+                <div>
+                  <h3>首次开机后重装安装包</h3>
+                  <p>刷完 ROM 第一件事是开机进入系统，把压缩包里的 Magisk.apk 或 ksu.apk 拉到手机重新安装，之后即可正常使用与高级设置（KSU 需要打开“显示系统应用”并为高级设置授权）。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">07</span>
+                <div>
+                  <h3>Magisk 默认是 stub</h3>
+                  <p>默认开机的 Magisk 是 stub.apk，无法正常使用，这是 Magisk 的强制行为，无法修改。</p>
+                </div>
+              </li>
+              <li class="log-item">
+                <span class="log-item-num">08</span>
+                <div>
+                  <h3>KSU 元模块注意事项</h3>
+                  <p>KSU 如果要使用元模块，务必提前在 KSU 中打开“隐藏 SELinux 修改”，元模块挂载会修改 SELinux 上下文导致卡二。</p>
+                </div>
+              </li>
+            </ol>
+
+            <aside class="log-note">
+              <p><b>精简版本选择</b>深度精简与常规精简本身就是高度精简的，区别在于常规精简保留了应用商店和小爱全家桶；如果需要用到这两者，必须刷入常规精简。</p>
+              <p><b>已知待办</b>温控阈值与降频机制的解限已完成，高级工具箱内的三档温控仍在持续适配更多机型。</p>
+            </aside>
+          </div>
+
+          <!-- 更新日志 -->
+          <div class="log-panel" id="logChangelog" role="tabpanel" aria-label="更新日志" data-panel="changelog" hidden>
+            <div class="log-changelog">
+              <article class="log-release">
+                <time datetime="2026-11-16">2026-11-16</time>
+                <ul>
+                  <li>高级设置新增「色彩风格」入口，直接打开系统隐藏的色彩风格页，可调智能色温与色彩模式。</li>
+                  <li>高级设置新增「屏幕调色（高级模式）」入口，支持自然 / P3 / sRGB 色域切换与 RGB 空间色彩调节。</li>
+                  <li>三合一图标优化：环顶缺口在有 Wi-Fi 时显示 Wi-Fi，无 Wi-Fi 时显示 5G/4G 网络制式，不再留空。</li>
+                  <li>三合一图标充电闪电缩小，避免顶到环内侧。</li>
+                  <li>修复插入充电线触发充电灵动岛时，三合一图标被挤到右侧的问题，现逐帧跟随原生电池位置，原生电池隐藏时同步隐藏。</li>
+                  <li>修复全局高刷关闭后，系统设置里的自定义刷新率（如 185Hz）不生效的问题。</li>
+                  <li>新增「动态最高刷新率」与「全局强锁刷新率」两种方案，可按使用习惯切换。</li>
+                  <li>修复开启双排信号后，实时网速与双排信号之间空隙过大，以及双排信号与右侧图标间距过小的问题。</li>
+                  <li>修复状态栏「实时网速」「电池百分比」开关无效的问题。</li>
+                  <li>修复重启后状态栏通知图标个数被重置为 0，现会记忆用户设置。</li>
+                  <li>优化一键广告关闭，补齐系统广告开关接口，解决部分广告关闭不彻底的问题。</li>
+                  <li>高级设置发布包启用 R8 混淆与资源压缩、签名校验与反调试防护，并同步更新 ROM 内置注入库。</li>
+                  <li>Lite-Store 升级至 V2.1，普通应用下载源扩展至小米、酷安、Google Play、APKPure、vivo、OPPO、华为、荣耀、三星、TapTap、豌豆荚、7723、F-Droid 与应用宝；搜索优先展示小米官方结果，其余来源后台补齐并按包名去重，卡片标注来源，详情与下载自动分发到对应源。</li>
+                  <li>Google Play 改为直连 play.google.com 公开详情页，仅提供搜索与版本信息；移除 Aurora 匿名会话依赖，APK/XAPK 下载改由直连 APKPure 公开版本接口提供，所有来源均不经过第三方中转。</li>
+                  <li>更新页新增「一键更新」：HyperOS 官方应用与普通应用均可按顺序批量解析并下载全部可用更新，并实时显示加入进度。</li>
+                  <li>新增「Root 自动安装」与「安装后清理安装包」两个默认开启的开关：Root 授权后下载完成的更新包自动静默安装；安装成功后删除对应安装包，系统安装器返回前台后再次确认已安装版本再清理。</li>
+                  <li>普通应用更新在小米源未收录时自动尝试酷安、APKPure 等补充源，单个应用命中首个可用更新后停止，补充源异常不影响主源结果。</li>
+                  <li>新增来源统一纳入安装前校验：核对包名、版本与签名，F-Droid 额外按索引 SHA-256 校验；Google Play 条目明确提示仅提供版本信息、不提供 APK 直链。</li>
+                  <li>下载阶段拦截反爬页面：Content-Type 为 text/html 时直接判定下载失败，避免把 HTML 验证页当作安装包保存。</li>
+                  <li>Release 包启用 R8 混淆、资源压缩与证书 SHA-256 校验，二次打包后拒绝启动；关闭明文流量并新增网络安全配置，同时关闭应用备份。</li>
+                  <li>下载任务中已完成且对应应用已安装的条目追加绿色「✓ 已安装」标记，安装按钮保留用于覆盖安装或重装。</li>
+                  <li>首页顶部标题栏替换为作者头像并标注「阿权Lite」；开屏标语「更稳定，更简单，更懂你」按三行渐变逐字淡入。</li>
+                </ul>
+              </article>
+
+              <article class="log-release">
+                <time datetime="2026-11-15">2026-11-15</time>
+                <ul>
+                  <li>修复省电与电池「亮屏时长」在拔掉电源并点亮屏幕后，比「使用时长」多约 20 小时的问题，现与系统电池统计保持一致。</li>
+                </ul>
+              </article>
+
+              <article class="log-release">
+                <time datetime="2026-11-14">2026-11-14</time>
+                <ul>
+                  <li>移除 WLAN 常驻扫描默认关闭与系统跟踪应用精简，恢复系统默认行为。</li>
+                </ul>
+              </article>
+
+              <article class="log-release">
+                <time datetime="2026-11-13">2026-11-13</time>
+                <ul>
+                  <li>相机实测：当前机型相机 HAL 不暴露 4K 120fps，普通录制最高 4K 60fps、高帧率仅 1080p，属于硬件抽象层限制，无法通过修改相机应用或 ROM 配置解锁。</li>
+                </ul>
+              </article>
+
+              <article class="log-release">
+                <time datetime="2026-11-12">2026-11-12</time>
+                <ul>
+                  <li>新增省电与电池“使用时长”下方显示“亮屏时长”。</li>
+                  <li>修复部分机型打开设置“我的设备”闪退，美化补丁改为自动适配不同版本结构。</li>
+                  <li>补充高级工具箱与 Lite-Store 的功能清单。</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="devices">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">04 / 机型</p>
+          <p class="section-index">05 / 机型</p>
           <h2>不止一台。</h2>
           <p class="section-sub">
             同一套 LITE 官改流程，覆盖小米与 Redmi 多代机型。
@@ -618,7 +1048,7 @@
     <section class="section" id="system">
       <div class="container system-grid">
         <div class="system-head reveal">
-          <p class="section-index">05 / 底层</p>
+          <p class="section-index">06 / 底层</p>
           <h2>不浮于<br>表面。</h2>
           <p class="section-sub">
             真正影响体验的改动，发生在系统框架层。它们不会出现在桌面上，却决定了系统能走多远。
@@ -687,7 +1117,7 @@
     <section class="section" id="flash">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">06 / 刷入</p>
+          <p class="section-index">07 / 刷入</p>
           <h2>六步，<br>换一套系统。</h2>
           <p class="section-sub">
             线刷包需在 Windows 下运行。首次刷入会清空数据，请先完成整机备份。
@@ -749,7 +1179,7 @@
       <div class="container">
         <div class="download-card reveal">
           <div class="download-main">
-            <p class="section-index">07 / 获取</p>
+            <p class="section-index">08 / 获取</p>
             <h2>LITE 官改<span class="download-edition">多机型</span></h2>
             <p class="download-desc">
               当前展示为 songyuan 构建，其他机型按各自代号与底包获取。
@@ -794,7 +1224,7 @@
     <section class="section" id="faq">
       <div class="container faq-grid">
         <div class="section-head reveal">
-          <p class="section-index">08 / 问答</p>
+          <p class="section-index">09 / 问答</p>
           <h2>刷之前，<br>先看这里。</h2>
           <p class="section-sub">关于数据、Root 与兼容性的几个常见问题。</p>
         </div>
