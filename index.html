@@ -1071,80 +1071,11 @@
       </div>
     </section>
 
-    <!-- 系统级改造 -->
-    <section class="section" id="system">
-      <div class="container system-grid">
-        <div class="system-head reveal">
-          <p class="section-index">05 / 底层</p>
-          <h2>不浮于<br>表面。</h2>
-          <p class="section-sub">
-            真正影响体验的改动，发生在系统框架层。它们不会出现在桌面上，却决定了系统能走多远。
-          </p>
-          <p class="system-warning">
-            以上改动会降低系统完整性保护。<br>
-            仅建议在个人设备、且理解风险的前提下使用。
-          </p>
-        </div>
-
-        <div class="system-list">
-          <article class="system-item reveal">
-            <span class="system-num">01</span>
-            <div>
-              <h3>签名校验绕过</h3>
-              <p>覆盖 Android 13/14 与 Android 16+ 的 V1/V2/V3 验签链路，接管 APK 签名、共享用户签名与 JAR 摘要比对，重签或替换系统应用不再被拒。</p>
-            </div>
-            <span class="system-tag">SYSTEM</span>
-          </article>
-          <article class="system-item reveal" style="--d:50ms">
-            <span class="system-num">02</span>
-            <div>
-              <h3>AVB 校验移除</h3>
-              <p>关闭 vbmeta 校验，同时保留完整的线刷回滚路径，方便随时恢复官方系统。</p>
-            </div>
-            <span class="system-tag">VERITY</span>
-          </article>
-          <article class="system-item reveal" style="--d:100ms">
-            <span class="system-num">03</span>
-            <div>
-              <h3>BL 锁伪装与 vbmeta 重签</h3>
-              <p>伪装为已锁 BL 与绿色验证状态，并按机型重新生成校验镜像，规避系统完整性检测。</p>
-            </div>
-            <span class="system-tag">VBMETA</span>
-          </article>
-          <article class="system-item reveal" style="--d:150ms">
-            <span class="system-num">04</span>
-            <div>
-              <h3>主题防恢复</h3>
-              <p>开机修复主题目录权限，重启后不再被系统重置，自定义主题可以长期保留。</p>
-            </div>
-            <span class="system-tag">THEME</span>
-          </article>
-          <article class="system-item reveal" style="--d:200ms">
-            <span class="system-num">05</span>
-            <div>
-              <h3>KSU / Magisk 内置</h3>
-              <p>内置 KernelSU 与 Magisk 双方案，按机型识别启动镜像并自动修补 Boot，刷完即有 root 环境。</p>
-            </div>
-            <span class="system-tag">ROOT</span>
-          </article>
-          <article class="system-item reveal" style="--d:250ms">
-            <span class="system-num">06</span>
-            <div>
-              <h3>Zipalign 全量校验</h3>
-              <p>所有系统 APK 统一进行对齐检查，减少加载与内存开销，也避免运行时的隐性异常。</p>
-            </div>
-            <span class="system-tag">APK</span>
-          </article>
-        </div>
-      </div>
-
-    </section>
-
     <!-- 刷入 -->
     <section class="section" id="flash">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">06 / 刷入</p>
+          <p class="section-index">05 / 刷入</p>
           <h2>六步，<br>换一套系统。</h2>
           <p class="section-sub">
             线刷包需在 Windows 下运行。首次刷入会清空数据，请先完成整机备份。
@@ -1206,7 +1137,7 @@
       <div class="container">
         <div class="download-card reveal">
           <div class="download-main">
-            <p class="section-index">07 / 获取</p>
+            <p class="section-index">06 / 获取</p>
             <h2>LITE 官改<span class="download-edition">多机型</span></h2>
             <p class="download-desc">
               当前展示为 songyuan 构建，其他机型按各自代号与底包获取。
@@ -1252,7 +1183,7 @@
     <section class="section" id="faq">
       <div class="container faq-grid">
         <div class="section-head reveal">
-          <p class="section-index">08 / 问答</p>
+          <p class="section-index">07 / 问答</p>
           <h2>刷之前，<br>先看这里。</h2>
           <p class="section-sub">关于数据、Root 与兼容性的几个常见问题。</p>
         </div>
