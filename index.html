@@ -132,32 +132,36 @@
             <p class="section-index">01 / 高级设置</p>
             <h2>一个入口，<br>接管系统。</h2>
             <p class="suite-desc">
-              「高级设置」随 ROM 内置，入口位于「设置 → 我的设备」。
-              无需安装、无需悬浮窗权限，改完即时生效。
+              「高级设置」随 ROM 内置，入口位于「设置 → 我的设备」。调度中心、状态栏、显示、充电与系统开关都收在一个应用里；
+              不需要 Magisk / Zygisk，无模块冲突，改完即时生效。
+            </p>
+            <p class="suite-desc">
+              调度中心可实时查看 CPU 核心频率、负载与整机功耗，并在性能、均衡、省电三档之间切换；
+              温控阈值、调度器与刷新率档位也能逐项调整。
             </p>
 
             <div class="suite-groups">
               <div class="suite-group">
                 <span class="suite-label">状态栏</span>
-                <p>三合一图标 · 图标显隐 · 摄像头电量环</p>
+                <p>三合一图标 · 24 项图标开关 · 摄像头电量环</p>
               </div>
               <div class="suite-group">
                 <span class="suite-label">显示</span>
-                <p>全局高刷 · 极暗 · 字体无级缩放</p>
+                <p>全局高刷 · 极暗模式 · 字体无级缩放</p>
               </div>
               <div class="suite-group">
                 <span class="suite-label">能源</span>
-                <p>充电控制 · 温控管理 · 电池健康度</p>
+                <p>温控三档 · 旁路供电 · 定量停充 · 电池健康</p>
               </div>
               <div class="suite-group">
                 <span class="suite-label">系统</span>
-                <p>应用深度优化 · 广告设置 · Wi-Fi 密码 · 开发者开关</p>
+                <p>应用深度优化 · 广告体检 · Wi-Fi 密码 · 调试入口</p>
               </div>
             </div>
 
             <ul class="suite-badges">
-              <li>系统级绘制</li>
-              <li>无需重启</li>
+              <li>免 Magisk / Zygisk</li>
+              <li>三档温控</li>
               <li>原生图标可还原</li>
             </ul>
           </div>
@@ -182,7 +186,7 @@
                   </span>
                   <span class="entry-text">
                     <b>LITE 官改高级设置</b>
-                    <em>状态栏 · 显示 · 能源 · 系统</em>
+                    <em>调度 · 状态栏 · 显示 · 能源</em>
                   </span>
                   <svg class="chevron" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5"/></svg>
                 </div>
@@ -226,7 +230,7 @@
             <div>
               <p class="gallery-label">INTERFACE / 界面实拍</p>
               <h3>界面，比描述更直接。</h3>
-              <p class="gallery-sub">10 张截图，来自 LITE 官改内置的「高级设置」。</p>
+              <p class="gallery-sub">9 张截图，来自 LITE 官改内置的「调度中心」与「高级设置」。</p>
             </div>
             <div class="gallery-nav">
               <button id="galleryPrev" type="button" aria-label="向左查看更多截图" disabled>
@@ -241,82 +245,74 @@
           <div class="gallery-rail" id="galleryRail" tabindex="0" aria-label="高级设置界面截图">
             <figure class="shot">
               <div class="shot-frame">
-                <img src="assets/screens/trio.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="三合一状态栏设置页：圆环预览、状态配色、总开关与布局选项">
+                <img src="assets/screens/settings-v2/01-dispatch.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="调度中心：均衡档位、CPU 核心频率与负载、实时功耗">
               </div>
-              <figcaption><b>三合一状态栏</b><span>圆环 / 胶囊 · 状态配色</span></figcaption>
+              <figcaption><b>调度中心</b><span>均衡档位 · CPU 实时负载</span></figcaption>
             </figure>
 
             <figure class="shot">
               <div class="shot-frame">
-                <img src="assets/screens/cutout.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="摄像头电量环设置页：Hook 安装、直径、粗细与位置微调">
+                <img src="assets/screens/settings-v2/02-power.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="调度中心：功耗时序、游戏自动切换与极致性能档位">
+              </div>
+              <figcaption><b>功耗与档位</b><span>功耗时序 · 性能 / 均衡</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/settings-v2/03-display.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="高级设置：锁定最高刷新率、刷新率档位与极暗模式">
+              </div>
+              <figcaption><b>显示与高刷</b><span>185Hz 档位 · 极暗模式</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/settings-v2/04-statusbar.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="高级设置：双排信号、电池百分比、状态栏网速与功耗开关">
+              </div>
+              <figcaption><b>状态栏开关</b><span>双排信号 · 网速与功耗</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/settings-v2/05-trio.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="高级设置：三合一状态栏效果预览、总开关、布局与整体大小">
+              </div>
+              <figcaption><b>三合一状态栏</b><span>圆环预览 · 布局与大小</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/settings-v2/06-dex2oat.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="高级设置：应用深度优化当前状态、开始深度优化与清除编译文件">
+              </div>
+              <figcaption><b>应用深度优化</b><span>全量编译 · 清理产物</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/settings-v2/07-ads.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="高级设置：关闭全部系统广告、广告体检与分类广告开关">
+              </div>
+              <figcaption><b>广告管理</b><span>一键关闭 · 广告体检</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/screens/settings-v2/08-cutout.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="高级设置：安装 Hook 模块、摄像头电量环、亮度小太阳与外观调节">
               </div>
               <figcaption><b>摄像头电量环</b><span>Hook 绘制 · 直径与位置</span></figcaption>
             </figure>
 
             <figure class="shot">
               <div class="shot-frame">
-                <img src="assets/screens/overview-top.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="高级设置首页：锁屏与显示、状态栏设置、电池和性能">
+                <img src="assets/screens/settings-v2/09-about.webp" width="640" height="1440" loading="lazy" decoding="async"
+                     alt="关于作者：应用版本 2.0、作者阿权 Lite、作者 QQ 与设备信息">
               </div>
-              <figcaption><b>功能总览</b><span>显示 · 状态栏 · 电池</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/display.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="全局高刷、极暗模式、字体大小与锁屏通知设置">
-              </div>
-              <figcaption><b>显示与高刷</b><span>全局高刷 · 极暗 · 字体</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/status-icons.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="状态栏图标设置：通知图标个数、纯净状态栏与系统图标开关">
-              </div>
-              <figcaption><b>状态栏图标</b><span>原生图标显隐 · 纯净状态栏</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/thermal.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="温控管理设置：当前预设与性能、均衡、省电三档">
-              </div>
-              <figcaption><b>温控管理</b><span>三档预设 · 自定义参数</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/battery.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="电池健康度：当前电量、温度、设计容量、实际容量与循环次数">
-              </div>
-              <figcaption><b>电池健康</b><span>容量 · 温度 · 循环次数</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/dex2oat.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="应用深度优化：当前状态、开始深度优化与清除编译文件">
-              </div>
-              <figcaption><b>应用深度优化</b><span>全量编译 · 进度可视</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/ads.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="广告与通知设置：通知过滤、通知访问权限、通知历史与通知样式">
-              </div>
-              <figcaption><b>广告与通知</b><span>通知过滤 · 系统广告开关</span></figcaption>
-            </figure>
-
-            <figure class="shot">
-              <div class="shot-frame">
-                <img src="assets/screens/overview-bottom.webp" width="640" height="1391" loading="lazy" decoding="async"
-                     alt="高级设置首页下半部分：系统设置、广告、WIFI 密码、开发者开关与关于">
-              </div>
-              <figcaption><b>功能总览 · 续</b><span>系统设置与关于</span></figcaption>
+              <figcaption><b>关于作者</b><span>版本 2.0 · 设备信息</span></figcaption>
             </figure>
           </div>
         </div>
