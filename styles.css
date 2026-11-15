@@ -4,23 +4,29 @@
 ------------------------------------------------------------------- */
 
 :root {
-  --bg: #07080a;
-  --bg-2: #0b0d10;
-  --text: #f2f3f5;
-  --muted: #9aa1aa;
-  --faint: #6b7280;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.15);
-  --surface: rgba(255, 255, 255, 0.035);
-  --surface-2: rgba(255, 255, 255, 0.055);
-  --accent: #7ee7d8;
-  --accent-strong: #a9f4e9;
-  --accent-dim: rgba(126, 231, 216, 0.12);
-  --amber: #f2c46a;
-  --red: #ff6b63;
-  --green: #5edc8d;
+  --bg: #f4f1ea;
+  --bg-2: #ece7dc;
+  --paper: #fffdf8;
+  --text: #171614;
+  --muted: #5c5a52;
+  --faint: #736f64;
+  --line: rgba(23, 22, 20, 0.1);
+  --line-strong: rgba(23, 22, 20, 0.22);
+  --surface: rgba(255, 255, 255, 0.55);
+  --surface-2: rgba(255, 255, 255, 0.82);
+  --accent: #1e5f4f;
+  --accent-strong: #14453a;
+  --accent-dim: rgba(30, 95, 79, 0.1);
+  --amber: #a97a2f;
+  --red: #b23a2e;
+  --green: #2f7a52;
+  --shadow-sm: 0 2px 10px rgba(50, 42, 30, 0.05);
+  --shadow-md: 0 18px 44px rgba(50, 42, 30, 0.08);
+  --shadow-lg: 0 30px 70px rgba(50, 42, 30, 0.12);
   --font: "Inter", "SF Pro Text", "HarmonyOS Sans SC", "MiSans", "Noto Sans SC",
     "PingFang SC", "Microsoft YaHei", sans-serif;
+  --display: "Iowan Old Style", "Palatino Linotype", "Songti SC",
+    "Noto Serif CJK SC", "Source Han Serif SC", "STSong", serif;
   --mono: "SF Mono", "JetBrains Mono", "Cascadia Code", "Roboto Mono", ui-monospace,
     monospace;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -3182,7 +3188,365 @@ code {
   }
 }
 
-/* ------------------------------------------------------------------ 动效偏好 */
+/* ------------------------------------------------------------------ 明亮主题覆盖 */
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.skip-link {
+  color: var(--paper);
+}
+
+/* 导航与首屏 */
+.nav.is-scrolled,
+.nav.is-open {
+  background: rgba(244, 241, 234, 0.82);
+}
+
+.brand-tag {
+  border-color: rgba(30, 95, 79, 0.32);
+}
+
+.hero-bg {
+  background:
+    radial-gradient(900px 600px at 78% 14%, rgba(30, 95, 79, 0.1), transparent 62%),
+    radial-gradient(720px 520px at 10% 88%, rgba(169, 122, 47, 0.08), transparent 65%),
+    linear-gradient(180deg, #f8f5ee 0%, #f4f1ea 68%, #f0ece2 100%);
+}
+
+.hero-bg::before {
+  background-image:
+    linear-gradient(rgba(23, 22, 20, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 22, 20, 0.045) 1px, transparent 1px);
+  opacity: 0.45;
+}
+
+.hero-bg::after {
+  background: radial-gradient(ellipse at 50% 100%, rgba(244, 241, 234, 0) 40%, var(--bg) 100%);
+}
+
+.hero-ghost {
+  -webkit-text-stroke: 1px rgba(23, 22, 20, 0.055);
+}
+
+.pulse {
+  box-shadow: 0 0 0 0 rgba(30, 95, 79, 0.35);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(30, 95, 79, 0.35); }
+  60% { box-shadow: 0 0 0 9px rgba(30, 95, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(30, 95, 79, 0); }
+}
+
+.hero-badge {
+  border-color: rgba(30, 95, 79, 0.35);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-lead {
+  color: #2e2c27;
+}
+
+.hero-meta dd {
+  color: #3c3a33;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.btn-ghost:hover {
+  border-color: rgba(23, 22, 20, 0.24);
+  background: var(--paper);
+}
+
+.device-stage::before {
+  background: radial-gradient(circle at 50% 45%, rgba(30, 95, 79, 0.14), transparent 65%);
+}
+
+.phone {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 40px 80px rgba(50, 42, 30, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* 数据条与卡片 */
+.stats-band {
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.card {
+  border-color: var(--line);
+  background: linear-gradient(180deg, #fffdf8, #fbf8f1);
+  box-shadow: var(--shadow-sm);
+}
+
+.card::before {
+  background: radial-gradient(
+    460px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(30, 95, 79, 0.07),
+    transparent 55%
+  );
+}
+
+.card:hover {
+  border-color: rgba(23, 22, 20, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+  background: var(--paper);
+  color: var(--accent);
+}
+
+.tag-row li {
+  color: #4a4840;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* 高级设置面板 */
+.suite-panel {
+  border-color: var(--line);
+  background:
+    radial-gradient(680px 420px at 0% 0%, rgba(30, 95, 79, 0.08), transparent 60%),
+    linear-gradient(150deg, #fbf8f2 0%, #f6f2e9 100%);
+  box-shadow: var(--shadow-md);
+}
+
+.suite-panel::after {
+  border: 1px solid rgba(23, 22, 20, 0.06);
+  box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.22);
+}
+
+.suite-group p {
+  color: #4a4840;
+}
+
+.suite-badges li {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.settings-card {
+  border-color: rgba(23, 22, 20, 0.12);
+  background: linear-gradient(180deg, #fffdf9 0%, #faf6ee 100%);
+  box-shadow:
+    0 30px 60px rgba(50, 42, 30, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.settings-bar {
+  border-bottom-color: var(--line);
+}
+
+.settings-dots i {
+  background: #c9c3b6;
+}
+
+.settings-row-muted {
+  color: var(--faint);
+}
+
+.settings-row-entry {
+  background: linear-gradient(90deg, rgba(30, 95, 79, 0.1), rgba(30, 95, 79, 0.02));
+  border-color: rgba(30, 95, 79, 0.18);
+}
+
+.entry-mark {
+  background: rgba(30, 95, 79, 0.1);
+}
+
+.row-label {
+  color: #3c3a33;
+}
+
+.settings-row-switch {
+  border-top-color: rgba(23, 22, 20, 0.06);
+}
+
+.switch {
+  background: rgba(23, 22, 20, 0.14);
+}
+
+.switch i {
+  background: #b8b2a5;
+}
+
+.switch.is-on {
+  background: rgba(30, 95, 79, 0.22);
+}
+
+.switch.is-on i {
+  background: var(--accent);
+}
+
+.dot-dim {
+  background: #c9c3b6;
+}
+
+/* 截图与设备框架 */
+.store-shot-frame,
+.shot-frame,
+.system-showcase-frame,
+.support-visual img {
+  border-color: rgba(23, 22, 20, 0.1);
+  background: linear-gradient(160deg, #fffefb 0%, #f7f3ea 100%);
+  box-shadow: var(--shadow-md);
+}
+
+.store-shot-frame img,
+.shot-frame img {
+  background: #f5f6f8;
+}
+
+.shot figcaption b,
+.store-shot figcaption b,
+.system-showcase figcaption b,
+.support-list b,
+.download-contact b {
+  color: #2a2824;
+}
+
+.gallery-nav button:hover:not(:disabled) {
+  color: var(--text);
+  border-color: rgba(23, 22, 20, 0.24);
+  background: var(--paper);
+}
+
+.device-group {
+  background: linear-gradient(180deg, #fffdf8, #faf6ee);
+  box-shadow: var(--shadow-sm);
+}
+
+.device-list li {
+  color: #46443d;
+}
+
+.device-list li::before {
+  opacity: 0.55;
+}
+
+.device-current {
+  border-color: rgba(30, 95, 79, 0.22);
+  background:
+    radial-gradient(520px 200px at 0% 0%, rgba(30, 95, 79, 0.1), transparent 65%),
+    var(--paper);
+  box-shadow: var(--shadow-sm);
+}
+
+.inline-link {
+  border-bottom-color: rgba(30, 95, 79, 0.4);
+}
+
+.system-warning {
+  border-left-color: rgba(169, 122, 47, 0.55);
+}
+
+/* 刷入 */
+.step {
+  border-color: var(--line);
+  background: linear-gradient(180deg, #fffdf9, #faf6ee);
+  box-shadow: var(--shadow-sm);
+}
+
+.step:hover {
+  border-color: rgba(23, 22, 20, 0.18);
+  box-shadow: var(--shadow-md);
+}
+
+.root-note {
+  border-color: var(--line);
+  background:
+    radial-gradient(500px 220px at 0% 0%, rgba(169, 122, 47, 0.08), transparent 65%),
+    var(--paper);
+  box-shadow: var(--shadow-sm);
+}
+
+.root-steps li {
+  border-left-color: rgba(23, 22, 20, 0.12);
+}
+
+/* 获取 */
+.download-card {
+  border-color: var(--line);
+  background:
+    radial-gradient(720px 420px at 80% 0%, rgba(30, 95, 79, 0.1), transparent 62%),
+    radial-gradient(520px 320px at 0% 100%, rgba(169, 122, 47, 0.07), transparent 65%),
+    linear-gradient(160deg, #fbf8f2 0%, #f6f2e9 100%);
+  box-shadow: var(--shadow-md);
+}
+
+.download-edition {
+  border-color: rgba(30, 95, 79, 0.3);
+}
+
+.spec-row b {
+  color: #3a382f;
+}
+
+/* 问答 */
+.faq-item summary {
+  color: #2a2824;
+}
+
+.faq-item summary:hover {
+  color: #000;
+}
+
+/* 功能日志 */
+.log-tab.is-active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--paper);
+}
+
+.log-tab.is-active span {
+  color: rgba(244, 241, 234, 0.55);
+}
+
+.log-note {
+  border-left-color: rgba(169, 122, 47, 0.55);
+  background: var(--paper);
+}
+
+.log-note b {
+  color: var(--text);
+}
+
+/* 标题字体：衬线，降低机械感 */
+.section-head h2,
+.suite-copy h2,
+.system-head h2,
+.download-main h2,
+.gallery-head h3,
+.support-copy h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* 移动端导航 */
+@media (max-width: 940px) {
+  .nav-links {
+    background: var(--bg);
+    border-bottom-color: var(--line);
+  }
+
+  .nav-links a {
+    border-bottom-color: rgba(23, 22, 20, 0.06);
+  }
+}
+
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
