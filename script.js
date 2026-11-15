@@ -110,33 +110,36 @@
   }
 
   /* 截图横向浏览 */
-  const rail = document.getElementById('galleryRail');
-  const galleryPrev = document.getElementById('galleryPrev');
-  const galleryNext = document.getElementById('galleryNext');
+  const initGallery = (railId, prevId, nextId) => {
+    const rail = document.getElementById(railId);
+    const prev = document.getElementById(prevId);
+    const next = document.getElementById(nextId);
+    if (!rail || !prev || !next) return;
 
-  if (rail && galleryPrev && galleryNext) {
     const step = () => {
       const shot = rail.querySelector('.shot');
       const gap = parseFloat(getComputedStyle(rail).gap) || 16;
       return (shot ? shot.getBoundingClientRect().width : 190) + gap;
     };
 
-    const syncGalleryNav = () => {
-      galleryPrev.disabled = rail.scrollLeft <= 4;
-      galleryNext.disabled =
-        rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
+    const syncNav = () => {
+      prev.disabled = rail.scrollLeft <= 4;
+      next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
     };
 
-    galleryPrev.addEventListener('click', () => {
+    prev.addEventListener('click', () => {
       rail.scrollBy({ left: -step() * 2, behavior: 'smooth' });
     });
-    galleryNext.addEventListener('click', () => {
+    next.addEventListener('click', () => {
       rail.scrollBy({ left: step() * 2, behavior: 'smooth' });
     });
-    rail.addEventListener('scroll', syncGalleryNav, { passive: true });
-    window.addEventListener('resize', syncGalleryNav);
-    syncGalleryNav();
-  }
+    rail.addEventListener('scroll', syncNav, { passive: true });
+    window.addEventListener('resize', syncNav);
+    syncNav();
+  };
+
+  initGallery('galleryRail', 'galleryPrev', 'galleryNext');
+  initGallery('storeRail', 'storePrev', 'storeNext');
 
   /* 卡片跟随光斑（仅精确指针） */
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');

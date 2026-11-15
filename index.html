@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LITE 官改 · 小米 / 红米多机型定制</title>
-  <meta name="description" content="LITE 官改：面向小米、Redmi K 与 Redmi Note 多机型的深度定制系统，内置高级设置、三合一状态栏与摄像头电量环。">
+  <meta name="description" content="LITE 官改：面向小米、Redmi K 与 Redmi Note 多机型的深度定制系统。217 项系统精简、KSU / Magisk 双 Root、内置高级设置与 Lite-Store。">
   <meta name="theme-color" content="#07080a">
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%2307080a'/%3E%3Ccircle cx='20' cy='20' r='12' fill='none' stroke='%237ee7d8' stroke-width='2.5' stroke-dasharray='58 18' stroke-linecap='round' transform='rotate(-90 20 20)'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%237ee7d8'/%3E%3C/svg%3E">
@@ -28,6 +28,7 @@
 
       <nav class="nav-links" id="navLinks" aria-label="主导航">
         <a href="#suite">高级设置</a>
+        <a href="#store">Lite-Store</a>
         <a href="#philosophy">理念</a>
         <a href="#features">特性</a>
         <a href="#log">功能日志</a>
@@ -68,8 +69,8 @@
             该留下的，一个不少；该安静的，彻底安静。
           </p>
           <p class="hero-desc hero-anim" style="--d:210ms">
-            同一套 LITE 官改流程，覆盖小米与红米多代机型。深度精简、系统调校与「高级设置」，
-            按机型代号与底包分别构建。
+            同一套 LITE 官改流程，覆盖小米与红米多代机型。217 项系统精简、KSU / Magisk 双 Root 方案，
+            配合内置「高级设置」与 Lite-Store，按机型代号与底包分别构建。
           </p>
           <div class="hero-actions hero-anim" style="--d:280ms">
             <a class="btn btn-primary" href="#features">
@@ -82,7 +83,7 @@
             <div><dt>底层</dt><dd>Android 13–17</dd></div>
             <div><dt>基座</dt><dd>HyperOS / MIUI</dd></div>
             <div><dt>机型</dt><dd>40+ 款</dd></div>
-            <div><dt>形态</dt><dd>线刷 ZIP</dd></div>
+            <div><dt>精简</dt><dd>217 项</dd></div>
           </dl>
         </div>
 
@@ -343,27 +344,170 @@
       </div>
     </section>
 
+    <!-- Lite-Store -->
+    <section class="section" id="store">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index">02 / Lite-Store</p>
+          <h2>应用与更新，<br>收在一处。</h2>
+          <p class="section-sub">
+            Lite-Store 是 ROM 内置的轻量应用商店：热门榜单、多源搜索、官方更新批量下载，
+            以及模块与框架下载。安装前统一校验包名、版本与签名。
+          </p>
+          <ul class="suite-badges store-badges">
+            <li>官方榜单</li>
+            <li>安装前校验</li>
+            <li>Root 静默安装</li>
+          </ul>
+        </div>
+
+        <div class="store-layout">
+          <div class="store-features reveal">
+            <article class="store-feature">
+              <span class="store-num">01</span>
+              <div>
+                <h3>应用市场</h3>
+                <p>首页直接展示小米官方热门榜，支持搜索、下拉刷新、分页加载与本地缓存，不伪造下载量或排名。</p>
+              </div>
+            </article>
+            <article class="store-feature">
+              <span class="store-num">02</span>
+              <div>
+                <h3>官方更新</h3>
+                <p>对可信的小米官方系统应用使用官方更新协议批量检查更新，安装前强制校验包名、版本与签名。</p>
+              </div>
+            </article>
+            <article class="store-feature">
+              <span class="store-num">03</span>
+              <div>
+                <h3>下载与安装</h3>
+                <p>统一下载目录并支持自定义且持久化，后台下载支持暂停、续传、校验与任务持久化；安装走系统安装器或可选 Root 静默安装，签名不兼容时阻止安装。</p>
+              </div>
+            </article>
+            <article class="store-feature">
+              <span class="store-num">04</span>
+              <div>
+                <h3>模块中心与框架下载</h3>
+                <p>模块中心收录 LSPosed 官方索引全量条目并直连开发者发布页，兼容传统 Xposed 与新版 libxposed 模块；框架下载中心提供 LSPosed 官方存档、Vector、LSPatch。</p>
+              </div>
+            </article>
+            <article class="store-feature">
+              <span class="store-num">05</span>
+              <div>
+                <h3>安全检查与主题</h3>
+                <p>安装前展示包名、来源、签名、Native ABI 与权限变化，ABI 不匹配时阻止安装；提供 Liquid Glass 主题，可切换主题色、明暗模式、玻璃透明度与模糊程度。</p>
+              </div>
+            </article>
+          </div>
+
+          <figure class="store-shot reveal" style="--d:80ms">
+            <div class="store-shot-frame">
+              <img src="assets/litestore/store-home.webp" width="426" height="926" loading="lazy" decoding="async"
+                   alt="Lite-Store 首页：HyperOS 官方更新、应用备份与恢复、系统组件补全与 Root 状态">
+            </div>
+            <figcaption><b>Lite-Store 首页</b><span>官方更新 · 备份恢复 · 组件补全</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery-block store-gallery">
+          <div class="gallery-head reveal">
+            <div>
+              <p class="gallery-label">LITE-STORE / 界面实拍</p>
+              <h3>从搜索到安装，每一步都看得见。</h3>
+              <p class="gallery-sub">7 张截图，覆盖应用、更新、模块、下载与备份。</p>
+            </div>
+            <div class="gallery-nav">
+              <button id="storePrev" type="button" aria-label="向左查看更多 Lite-Store 截图" disabled>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+              </button>
+              <button id="storeNext" type="button" aria-label="向右查看更多 Lite-Store 截图">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery-rail" id="storeRail" tabindex="0" aria-label="Lite-Store 界面截图">
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-apps.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 应用页：热门应用榜单与搜索入口">
+              </div>
+              <figcaption><b>应用市场</b><span>热门榜单 · 多源搜索</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-updates.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 更新页：HyperOS 官方应用更新与下载更新包">
+              </div>
+              <figcaption><b>更新中心</b><span>官方更新 · 一键更新</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-modules.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 模块中心：LSPosed 官方索引、已安装模块与模块目录">
+              </div>
+              <figcaption><b>模块中心</b><span>LSPosed 索引 · 本机模块</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-frameworks.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 框架下载中心：LSPosed 官方版本与 Zygisk Next">
+              </div>
+              <figcaption><b>框架下载</b><span>LSPosed · Zygisk Next</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-profile.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 我的页面：作者信息、默认下载路径与下载文件管理">
+              </div>
+              <figcaption><b>我的</b><span>下载目录 · 作者信息</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-backup.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 应用备份与恢复：选择应用并备份 APK 与私有数据">
+              </div>
+              <figcaption><b>应用备份</b><span>APK · 私有数据 · Root</span></figcaption>
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-frame">
+                <img src="assets/litestore/store-splash.webp" width="426" height="926" loading="lazy" decoding="async"
+                     alt="Lite-Store 开屏页：更稳定，更简单，更懂你">
+              </div>
+              <figcaption><b>开屏</b><span>更稳定 · 更简单 · 更懂你</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 数据条 -->
     <section class="stats-band" aria-label="支持信息">
       <div class="container stats-grid">
         <div class="stat reveal">
+          <span class="stat-label">精简规模</span>
+          <strong>217 项</strong>
+          <span class="stat-note">删除 / 替换 · 深度与常规两版</span>
+        </div>
+        <div class="stat reveal" style="--d:60ms">
           <span class="stat-label">适配平台</span>
           <strong>Android 13–17</strong>
           <span class="stat-note">HyperOS / MIUI 多版本</span>
         </div>
-        <div class="stat reveal" style="--d:60ms">
+        <div class="stat reveal" style="--d:120ms">
           <span class="stat-label">机型覆盖</span>
           <strong>40+ 款</strong>
           <span class="stat-note">小米 · Redmi K · Redmi Note</span>
         </div>
-        <div class="stat reveal" style="--d:120ms">
-          <span class="stat-label">当前构建</span>
-          <strong>K100 Pro Max</strong>
-          <span class="stat-note">songyuan / M098FE</span>
-        </div>
         <div class="stat reveal" style="--d:180ms">
           <span class="stat-label">内置工具</span>
-          <strong>高级设置</strong>
+          <strong>高级设置 + Lite-Store</strong>
           <span class="stat-note">系统级 · 免安装</span>
         </div>
       </div>
@@ -373,7 +517,7 @@
     <section class="section" id="philosophy">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">02 / 理念</p>
+          <p class="section-index">03 / 理念</p>
           <h2>删掉噪音，<br>留下秩序。</h2>
           <p class="section-sub">
             LITE 官改不是功能堆叠，而是一次有取舍的重构。只保留能让系统更安静、更顺手的部分。
@@ -404,7 +548,7 @@
     <section class="section" id="features">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">03 / 特性</p>
+          <p class="section-index">04 / 特性</p>
           <h2>每一处改动，<br>都能被感知。</h2>
           <p class="section-sub">
             从状态栏到温控节点，把系统能力收拢成几件真正会用的事。
@@ -420,9 +564,9 @@
               <span class="card-kicker">DEBLOAT</span>
             </div>
             <h3>深度精简</h3>
-            <p>剔除推广、统计、游戏中心、音乐视频与应用商店等冗余组件，保留相机、音频、振动与互联等核心能力。</p>
+            <p>共 217 项删除/替换，覆盖应用商店、游戏中心、小米支付、系统更新、语音助手与 Cust 预装应用，保留相机、相册、设置等核心组件。</p>
             <ul class="tag-row">
-              <li>推广服务</li><li>统计组件</li><li>冗余日志</li><li>预装应用</li>
+              <li>217 项</li><li>推广服务</li><li>统计组件</li><li>预装应用</li>
             </ul>
           </article>
 
@@ -434,7 +578,7 @@
               <span class="card-kicker">PERFORMANCE</span>
             </div>
             <h3>性能与温控</h3>
-            <p>精简日志与调试服务，放宽不必要的温控降频，调整帧率与动态缓冲策略，让性能释放更接近硬件本身。</p>
+            <p>关闭全部日志与后台上报，放宽缓存与后台进程上限，解除显示、帧率、画质与框架层的温控降频，让性能释放更接近硬件本身。</p>
             <ul class="tag-row">
               <li>日志降噪</li><li>帧率策略</li><li>温控放宽</li><li>动态缓冲</li>
             </ul>
@@ -497,7 +641,7 @@
               </span>
             </div>
             <h3>完整性改造</h3>
-            <p>绕过系统应用签名校验、去除 AVB 校验、主题防恢复，并内置 Magisk 环境。</p>
+            <p>签名校验与安装限制破解、AVB 移除、BL 锁伪装与 vbmeta 重签、主题防恢复，并内置 KSU / Magisk 双 Root 方案。</p>
           </article>
         </div>
       </div>
@@ -507,7 +651,7 @@
     <section class="section" id="log">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">04 / 功能日志</p>
+          <p class="section-index">05 / 功能日志</p>
           <h2>完整清单，<br>逐条列出。</h2>
           <p class="section-sub">
             整理自 ROM 内置的功能日志：系统层改动、Lite-Store 与高级工具箱，
@@ -935,7 +1079,7 @@
     <section class="section" id="devices">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">05 / 机型</p>
+          <p class="section-index">06 / 机型</p>
           <h2>不止一台。</h2>
           <p class="section-sub">
             同一套 LITE 官改流程，覆盖小米与 Redmi 多代机型。
@@ -1048,7 +1192,7 @@
     <section class="section" id="system">
       <div class="container system-grid">
         <div class="system-head reveal">
-          <p class="section-index">06 / 底层</p>
+          <p class="section-index">07 / 底层</p>
           <h2>不浮于<br>表面。</h2>
           <p class="section-sub">
             真正影响体验的改动，发生在系统框架层。它们不会出现在桌面上，却决定了系统能走多远。
@@ -1064,7 +1208,7 @@
             <span class="system-num">01</span>
             <div>
               <h3>签名校验绕过</h3>
-              <p>针对 Android 16 / 17 的 framework、services 与 miui-services 处理，修改版系统应用可正常安装。</p>
+              <p>覆盖 Android 13/14 与 Android 16+ 的 V1/V2/V3 验签链路，接管 APK 签名、共享用户签名与 JAR 摘要比对，重签或替换系统应用不再被拒。</p>
             </div>
             <span class="system-tag">SYSTEM</span>
           </article>
@@ -1079,24 +1223,24 @@
           <article class="system-item reveal" style="--d:100ms">
             <span class="system-num">03</span>
             <div>
-              <h3>Data 加密移除</h3>
-              <p>按构建配置关闭 data 加密，便于备份、迁移与救援，也让跨版本刷入更干净。</p>
+              <h3>BL 锁伪装与 vbmeta 重签</h3>
+              <p>伪装为已锁 BL 与绿色验证状态，并按机型重新生成校验镜像，规避系统完整性检测。</p>
             </div>
-            <span class="system-tag">DATA</span>
+            <span class="system-tag">VBMETA</span>
           </article>
           <article class="system-item reveal" style="--d:150ms">
             <span class="system-num">04</span>
             <div>
               <h3>主题防恢复</h3>
-              <p>调整主题目录权限，重启后不再被系统重置，自定义主题可以长期保留。</p>
+              <p>开机修复主题目录权限，重启后不再被系统重置，自定义主题可以长期保留。</p>
             </div>
             <span class="system-tag">THEME</span>
           </article>
           <article class="system-item reveal" style="--d:200ms">
             <span class="system-num">05</span>
             <div>
-              <h3>Magisk 内置</h3>
-              <p>ROM 内附带 Magisk，按首次开机提示完成环境修复，无需额外寻找刷机包。</p>
+              <h3>KSU / Magisk 内置</h3>
+              <p>内置 KernelSU 与 Magisk 双方案，按机型识别启动镜像并自动修补 Boot，刷完即有 root 环境。</p>
             </div>
             <span class="system-tag">ROOT</span>
           </article>
@@ -1117,7 +1261,7 @@
     <section class="section" id="flash">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-index">07 / 刷入</p>
+          <p class="section-index">08 / 刷入</p>
           <h2>六步，<br>换一套系统。</h2>
           <p class="section-sub">
             线刷包需在 Windows 下运行。首次刷入会清空数据，请先完成整机备份。
@@ -1133,7 +1277,7 @@
           <li class="step reveal" style="--d:60ms">
             <span class="step-num">02</span>
             <h3>下载与解压</h3>
-            <p>在 Windows 上把线刷包解压到简短路径，避免中文目录与过长的文件名。</p>
+            <p>在 Windows 上解压线刷包，先运行压缩包内以 drive 开头的驱动包完成安装。</p>
           </li>
           <li class="step reveal" style="--d:120ms">
             <span class="step-num">03</span>
@@ -1143,17 +1287,17 @@
           <li class="step reveal" style="--d:180ms">
             <span class="step-num">04</span>
             <h3>运行线刷脚本</h3>
-            <p>双击 <code>LITE手工官改_*.bat</code>，等待各分区写入完成，中途不要拔线。</p>
+            <p>双击 BAT 批处理文件，按提示选择 <b>Y</b> 保数据或 <b>N</b> 格式化；中途不要拔线。</p>
           </li>
           <li class="step reveal" style="--d:240ms">
             <span class="step-num">05</span>
-            <h3>选择刷入模式</h3>
-            <p>首次或跨版本选择 <b>N</b>（格式化 Data）；同版本升级可选择 <b>Y</b> 保留数据。</p>
+            <h3>选择 Root 方案</h3>
+            <p>随后出现 123 选项：<b>1</b> 保持无 root，<b>2</b> Magisk，<b>3</b> KSU，按需选择。</p>
           </li>
           <li class="step reveal" style="--d:300ms">
             <span class="step-num">06</span>
             <h3>首次开机</h3>
-            <p>脚本会自动重启。首次启动较慢，请耐心等待，不要强制断电或自行重启。</p>
+            <p>脚本会自动重启。进入系统后重新安装压缩包内的 Magisk.apk 或 ksu.apk。</p>
           </li>
         </ol>
 
@@ -1162,13 +1306,13 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 19 6v5.6c0 4-3 7.3-7 9-4-1.7-7-5-7-9V6l7-2.5Z"/><path d="M12 8v4.5"/><circle cx="12" cy="16" r=".8" fill="currentColor" stroke="none"/></svg>
             <div>
               <h3>首次开机的 Root 步骤</h3>
-              <p>如果 Magisk 显示灰色图标，按下面顺序完成环境修复。</p>
+              <p>Magisk 默认是 stub，无法直接使用；按下面顺序完成。</p>
             </div>
           </div>
           <ol class="root-steps">
-            <li><b>第一次开机</b><span>安装 ROM 内的 Magisk.apk，打开后点击「修复环境」并确认。</span></li>
-            <li><b>第二次开机</b><span>在 Magisk 中选择「直接安装到系统」。</span></li>
-            <li><b>第三次开机</b><span>若面具无法打开，覆盖安装最新版德尔塔面具即可正常使用。</span></li>
+            <li><b>重装安装包</b><span>把压缩包里的 Magisk.apk 或 ksu.apk 拉到手机重新安装。</span></li>
+            <li><b>Magisk stub</b><span>默认开机的 stub.apk 无法正常使用，属 Magisk 强制行为，无法修改。</span></li>
+            <li><b>KSU 配置</b><span>打开「显示系统应用」并为高级设置授权；使用元模块前开启「隐藏 SELinux 修改」。</span></li>
           </ol>
         </aside>
       </div>
@@ -1179,7 +1323,7 @@
       <div class="container">
         <div class="download-card reveal">
           <div class="download-main">
-            <p class="section-index">08 / 获取</p>
+            <p class="section-index">09 / 获取</p>
             <h2>LITE 官改<span class="download-edition">多机型</span></h2>
             <p class="download-desc">
               当前展示为 songyuan 构建，其他机型按各自代号与底包获取。
@@ -1224,7 +1368,7 @@
     <section class="section" id="faq">
       <div class="container faq-grid">
         <div class="section-head reveal">
-          <p class="section-index">09 / 问答</p>
+          <p class="section-index">10 / 问答</p>
           <h2>刷之前，<br>先看这里。</h2>
           <p class="section-sub">关于数据、Root 与兼容性的几个常见问题。</p>
         </div>
@@ -1236,7 +1380,11 @@
           </details>
           <details class="faq-item">
             <summary>ROM 自带 Root 吗？<span class="faq-icon"></span></summary>
-            <p>内置 Magisk。首次开机按页面中的三步提示完成环境修复即可；如果面具更新，覆盖安装最新版德尔塔面具。</p>
+            <p>内置 KernelSU 与 Magisk 双方案，刷入时按 123 选项选择即可。首次开机需重新安装压缩包内的 Magisk.apk 或 ksu.apk；默认开机的 Magisk 是 stub，无法直接使用。</p>
+          </details>
+          <details class="faq-item">
+            <summary>Lite-Store 是什么？<span class="faq-icon"></span></summary>
+            <p>ROM 内置的轻量应用商店：提供官方热门榜、多源搜索、HyperOS 官方更新批量下载，以及 LSPosed 模块与框架下载。所有安装前都会校验包名、版本与签名。</p>
           </details>
           <details class="faq-item">
             <summary>可以在其他机型上刷入吗？<span class="faq-icon"></span></summary>

@@ -1582,6 +1582,109 @@ code {
   color: var(--faint);
 }
 
+/* ------------------------------------------------------------------ Lite-Store */
+
+.store-badges {
+  margin-top: 22px;
+}
+
+.store-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+  margin-top: clamp(44px, 5.5vw, 72px);
+}
+
+.store-features {
+  border-top: 1px solid var(--line);
+}
+
+.store-feature {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.store-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--faint);
+  padding-top: 4px;
+}
+
+.store-feature h3 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.store-feature p {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.store-shot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.store-shot-frame {
+  width: min(100%, 300px);
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  background: linear-gradient(160deg, #23262b 0%, #131518 48%, #0b0d10 100%);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.45);
+}
+
+.store-shot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 26px;
+  background: #f5f6f8;
+}
+
+.store-shot figcaption {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.store-shot figcaption b {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #e3e7eb;
+}
+
+.store-shot figcaption span {
+  display: block;
+  margin-top: 4px;
+  font-size: 10.5px;
+  color: var(--faint);
+}
+
+.store-gallery {
+  margin-top: clamp(48px, 7vw, 88px);
+}
+
+@media (max-width: 940px) {
+  .store-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .store-shot {
+    justify-self: center;
+  }
+}
+
 /* ------------------------------------------------------------------ 界面实拍 */
 
 .gallery-block {
