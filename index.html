@@ -82,7 +82,7 @@
           <dl class="hero-meta hero-anim" style="--d:350ms">
             <div><dt>底层</dt><dd>Android 13–17</dd></div>
             <div><dt>基座</dt><dd>HyperOS / MIUI</dd></div>
-            <div><dt>机型</dt><dd>40+ 款</dd></div>
+            <div><dt>机型</dt><dd>46 款</dd></div>
             <div><dt>精简</dt><dd>217 项</dd></div>
           </dl>
         </div>
@@ -498,7 +498,7 @@
         </div>
         <div class="stat reveal" style="--d:120ms">
           <span class="stat-label">机型覆盖</span>
-          <strong>40+ 款</strong>
+          <strong>46 款</strong>
           <span class="stat-note">小米 · Redmi K · Redmi Note</span>
         </div>
         <div class="stat reveal" style="--d:180ms">
@@ -1078,9 +1078,14 @@
           <p class="section-index">06 / 机型</p>
           <h2>不止一台。</h2>
           <p class="section-sub">
-            同一套 LITE 官改流程，覆盖小米与 Redmi 多代机型。
-            每台设备使用自己的底包、代号与线刷配置，不能跨型号混刷。
+            同一套 LITE 官改流程，覆盖 46 款小米与 Redmi 机型。
+            每台设备使用自己的官方底包、代号与线刷配置，不能跨型号混刷。
           </p>
+          <ul class="suite-badges device-badges">
+            <li>官方底包构建</li>
+            <li>Magisk 跟随官方更新</li>
+            <li>无老机型移植版</li>
+          </ul>
         </div>
 
         <div class="device-groups">
@@ -1126,7 +1131,7 @@
                 <span class="device-kicker">REDMI K</span>
                 <h3>Redmi K 系列</h3>
               </div>
-              <span class="device-count">17 款</span>
+              <span class="device-count">19 款</span>
             </header>
             <ul class="device-list">
               <li>Redmi K50</li>
@@ -1144,7 +1149,9 @@
               <li>Redmi K80 Pro</li>
               <li>Redmi K80 Ultra</li>
               <li>Redmi K90</li>
+              <li>Redmi K90 至尊版</li>
               <li>Redmi K90 Pro Max</li>
+              <li>Redmi K100 Pro</li>
               <li>Redmi K100 Pro Max</li>
             </ul>
           </article>
@@ -1178,7 +1185,8 @@
         </div>
 
         <p class="device-note reveal">
-          机型列表整理自 make.sh 的机型映射。每款设备需使用对应代号与底包单独构建，
+          机型列表整理自 make.sh 的机型映射。官改 ROM 跟随官方更新，内置 Magisk 也随官方版本更新；
+          每款设备均基于对应机型的官方底包单独构建，不提供老机型移植版本。
           请勿把其他型号的线刷包刷入本机。
         </p>
       </div>
@@ -1352,7 +1360,8 @@
             <div class="spec-row"><span>底包</span><b>HyperOS 4.0.5.0.XGNCNXM</b></div>
             <div class="spec-row"><span>Android</span><b>17 · API 37</b></div>
             <div class="spec-row"><span>平台</span><b>第五代骁龙 8 至尊版</b></div>
-            <div class="spec-row"><span>支持机型</span><b>40+ 款</b></div>
+            <div class="spec-row"><span>支持机型</span><b>46 款</b></div>
+            <div class="spec-row"><span>移植版本</span><b>无 · 仅官方底包构建</b></div>
             <div class="spec-row"><span>包体</span><b>约 9.9 GB · 线刷 ZIP</b></div>
             <div class="spec-row"><span>作者</span><b>阿权Lite</b></div>
           </div>
@@ -1384,7 +1393,7 @@
           </details>
           <details class="faq-item">
             <summary>可以在其他机型上刷入吗？<span class="faq-icon"></span></summary>
-            <p>可以。LITE 官改覆盖上方机型列表中的小米与 Redmi 设备，但必须使用对应代号与底包构建的线刷包。不同型号的分区与硬件配置不同，不能把 songyuan 的包刷到其他机型。</p>
+            <p>列表内的机型都有对应版本，但必须使用该机型的代号与官方底包构建的线刷包。LITE 官改不做老机型移植，列表外的机型没有可用版本；内置 Magisk 跟随官方更新，不同型号之间也不能互刷。</p>
           </details>
           <details class="faq-item">
             <summary>刷坏了怎么回滚？<span class="faq-icon"></span></summary>

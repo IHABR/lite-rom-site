@@ -2059,12 +2059,16 @@ code {
   transform: translateX(3px);
 }
 
+.device-badges {
+  margin-top: 22px;
+}
+
 .device-note {
   margin-top: 18px;
-  max-width: 720px;
-  font-size: 10.5px;
+  max-width: 780px;
+  font-size: 11.5px;
   line-height: 1.8;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .inline-link {
