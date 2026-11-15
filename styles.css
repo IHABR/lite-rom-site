@@ -3546,6 +3546,30 @@ code {
   }
 }
 
+/* 页脚访问统计 */
+.footer-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.footer-views {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.footer-views b {
+  font-weight: 500;
+  color: var(--accent);
+}
+
 
 
 @media (prefers-reduced-motion: reduce) {
